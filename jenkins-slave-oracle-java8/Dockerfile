@@ -1,5 +1,4 @@
-# This Dockerfile is used to build an image containing basic stuff to be used as a Jenkins slave build node.
-FROM 192.168.10.120:5000/xsl/nodejs4
+FROM ubuntu:trusty
 
 # Make sure the package repository is up to date.
 RUN apt-get install -y software-properties-common
