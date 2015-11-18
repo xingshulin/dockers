@@ -22,7 +22,3 @@ install -g \
     bunyan \
     nodemon \
     gulp
-
-EXPOSE 22
-
-CMD ["/usr/sbin/sshd", "-D"]
