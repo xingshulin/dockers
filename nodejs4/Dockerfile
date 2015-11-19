@@ -7,7 +7,13 @@ RUN sudo apt-get update -y
 RUN apt-get install -yq \
     curl \
     git \
+    build-essential \
+    python-software-properties \
+    python \
+    g++ \
+    make \
     nano
+
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
