@@ -20,11 +20,7 @@ RUN sudo apt-get install -y nodejs
 RUN node -v && npm -v
 
 #prepare tools
-RUN npm --registry=https://registry.npm.taobao.org \
---cache=$HOME/.npm/.cache/cnpm \
---disturl=https://npm.taobao.org/dist \
---userconfig=$HOME/.cnpmrc \
-install -g \
+RUN npm install -g \
     bunyan \
     nodemon \
     gulp
