@@ -23,4 +23,5 @@ RUN node -v && npm -v
 RUN npm install -g \
     bunyan \
     nodemon \
-    gulp
+    gulp \
+    pm2
