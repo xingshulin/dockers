@@ -24,4 +24,5 @@ RUN npm install -g \
     bunyan \
     nodemon \
     gulp \
-    pm2
+    pm2 \
+    webpack
