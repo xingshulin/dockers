@@ -17,6 +17,7 @@ RUN apt-get install -yq \
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
+RUN npm install npm -g
 RUN node -v && npm -v
 
 #prepare tools
