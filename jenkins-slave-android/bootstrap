@@ -8,7 +8,7 @@ curl -O "$JENKINS_URL/jnlpJars/jenkins-cli.jar"
 echo "Login $JENKINS_USER"
 java -jar jenkins-cli.jar login --username "$JENKINS_USER" --password "$JENKINS_PASSWORD"
 
-nodeName=${NODE_NAME:=$(hostname)}
+nodeName=${NODE_NAME:=$HOSTNAME}
 echo "Register container $nodeName as slave"
 java -jar jenkins-cli.jar create-node "$nodeName" << EOF
 <slave>
