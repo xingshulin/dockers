@@ -6,6 +6,8 @@ ENV JENKINS_PASSWORD admin
 ENV NODE_NAME hostname
 ENV NODE_LABEL android
 
+COPY ./bootstrap ./bootstrap
+
 RUN mkdir -p /var/jenkins_slave/
 
 ENTRYPOINT ["sh", "./bootstrap"]
