@@ -1,4 +1,4 @@
-android slave for jenkins, contained by docker
+android slave for jenkins, empowered by docker
 ====
 
 This is a docker image, with android sdk and jenkins slave installed. It can be used for android CI and automation testing.
