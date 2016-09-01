@@ -1,0 +1,19 @@
+version: '2'
+services:
+  jenkins-master:
+    image: jenkins:latest
+    ports:
+      - "8080:8080"
+      - "50000:5000"
+    links:
+      - android-slave
+  android-slave:
+    image: daocloud.io/hycf555/jenkins-android-slave:master-41ed92c
+    ports: 
+      - "2181:2181"
+      - "9092:9092"
+    environment:
+      - JENKINS_URL=http://jenkins-master:8080
+      - JENKINS_USER=admin
+      - JENKINS_PASSWORD=admin
+      - NODE_LABEL=android
