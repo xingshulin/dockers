@@ -13,7 +13,7 @@ echo "Register container $nodeName as slave"
 java -jar jenkins-cli.jar create-node "$nodeName" << EOF
 <slave>
     <name>$nodeName</name>
-    <description>$nodeName for $NODE_LABEL</description>
+    <description>docker slave $nodeName for $NODE_LABEL</description>
     <remoteFS>/var/jenkins_slave/</remoteFS>
     <numExecutors>1</numExecutors>
     <mode>NORMAL</mode>
