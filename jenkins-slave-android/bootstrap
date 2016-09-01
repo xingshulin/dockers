@@ -8,12 +8,11 @@ curl -O "$JENKINS_URL/jnlpJars/jenkins-cli.jar"
 echo "Login $JENKINS_USER"
 java -jar jenkins-cli.jar login --username "$JENKINS_USER" --password "$JENKINS_PASSWORD"
 
-nodeName=${NODE_NAME:=$HOSTNAME}
-echo "Register container $nodeName as slave"
-java -jar jenkins-cli.jar create-node "$nodeName" << EOF
+echo "Register container $NODE_NAME as slave"
+java -jar jenkins-cli.jar create-node "$NODE_NAME" << EOF
 <slave>
-    <name>$nodeName</name>
-    <description>$nodeName for $NODE_LABEL</description>
+    <name>$NODE_NAME</name>
+    <description>$NODE_NAME for $NODE_LABEL</description>
     <remoteFS>/var/jenkins_slave/</remoteFS>
     <numExecutors>1</numExecutors>
     <mode>NORMAL</mode>
@@ -28,5 +27,5 @@ echo "Download slave.jar"
 curl -O "$JENKINS_URL/jnlpJars/slave.jar"
 
 echo "Connect slave to master"
-java -jar slave.jar -jnlpCredentials "$JENKINS_USER:$JENKINS_PASSWORD" -jnlpUrl "$JENKINS_URL/computer/$nodeName/slave-agent.jnlp"
+java -jar slave.jar -jnlpCredentials "$JENKINS_USER:$JENKINS_PASSWORD" -jnlpUrl "$JENKINS_URL/computer/$NODE_NAME/slave-agent.jnlp"
 
