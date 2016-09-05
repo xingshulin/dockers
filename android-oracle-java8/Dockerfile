@@ -19,7 +19,7 @@ RUN cd /opt && \
     rm android-sdk_r24.4.1-linux.tgz && \
     (echo y | android-sdk-linux/tools/android -s update sdk --no-ui --filter platform-tools,tools -a ) && \
     (echo y | android-sdk-linux/tools/android -s update sdk --no-ui --filter extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository -a) && \
-    (echo y | android-sdk-linux/tools/android -s update sdk --no-ui --filter build-tools-23.0.2,android-24 -a)
+    (echo y | android-sdk-linux/tools/android -s update sdk --no-ui --filter build-tools-23.0.3,android-24,android-23,android-22,android-21 -a)
 
 # Setup environment
 ENV ANDROID_HOME /opt/android-sdk-linux
