@@ -1,4 +1,4 @@
-FROM jacekmarchwicki/android:latest
+FROM daocloud.io/hycf555/android:master-bf0a8c8
 
 ENV JENKINS_URL http://localhost:8080
 ENV JENKINS_USER admin
