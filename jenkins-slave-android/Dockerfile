@@ -1,4 +1,4 @@
-FROM daocloud.io/hycf555/android-oracle-java8:master-476b1ab
+FROM daocloud.io/hycf555/android-oracle-java8:master-7889afa
 
 ENV JENKINS_URL http://localhost:8080
 ENV JENKINS_USER admin
