@@ -12,7 +12,7 @@ sdkDir="$@"
 echo "Installing android sdk to ${sdkDir}, current dir is ${PWD}" 
 mkdir -p "${sdkDir}"
 wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
-tar xzf android-sdk_r24.4.1-linux.tgz -C "$@"
+tar xzf android-sdk_r24.4.1-linux.tgz --strip-components 1 -C "$@"
 rm android-sdk_r24.4.1-linux.tgz
 cd "${sdkDir}"
 echo y | ./tools/android -s update sdk --no-ui --filter platform-tools,tools -a
