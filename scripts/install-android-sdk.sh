@@ -4,6 +4,7 @@ apt-get clean && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install Deps
 dpkg --add-architecture i386 
+apt-get update -y 
 apt-get install -y --force-yes expect git wget libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 python curl
 
 # Install Android SDK
