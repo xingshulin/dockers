@@ -1,4 +1,4 @@
-apt-get update 
+apt-get update -y
 apt-get install -y software-properties-common 
 apt-get clean && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
