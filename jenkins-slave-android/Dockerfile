@@ -22,9 +22,9 @@ ENV JENKINS_PASSWORD admin
 ENV NODE_NAME ''
 ENV NODE_LABEL android
 
-COPY ./bootstrap ./bootstrap
+COPY ./scripts/start-slave.sh ./start-slave.sh
 
 RUN mkdir -p /var/jenkins_slave/
 
-ENTRYPOINT ["sh", "./bootstrap"]
+ENTRYPOINT ["./start-slave.sh"]
 
