@@ -2,7 +2,7 @@ FROM gettyimages/spark
 
 # Install dependencies
 RUN apt-get update \
- && apt-get install -y python python-dev python-pip, gcc, g++, cmake\
+ && apt-get install -y python, python-dev, python-pip, gcc, g++, cmake\
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
