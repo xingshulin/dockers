@@ -3,7 +3,7 @@
 mkdir -p /usr/opencv
 
 cd /usr/opencv
-curl -sOL --retry 3 https://github.com/Itseez/opencv/archive/3.1.0.zip 
+curl -sOL --retry 3 https://github.com/Itseez/opencv/archive/3.1.0.zip
 unzip 3.1.0.zip
 
 cd opencv-3.1.0
