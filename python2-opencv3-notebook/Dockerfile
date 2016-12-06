@@ -4,4 +4,4 @@ RUN pip install jupyter
 
 ENV PORT 8888
 
-ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--port", "$PORT"]
+ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--port", $PORT]
