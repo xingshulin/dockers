@@ -6,4 +6,4 @@ ENV PORT=8888
 
 EXPOSE $PORT
 
-ENTRYPOINT ["bash", "-c", "jupyter notebook --port ${PORT} --no-browser"]
+ENTRYPOINT ["bash", "-c", "jupyter notebook --ip 0.0.0.0 --port ${PORT} --no-browser"]
