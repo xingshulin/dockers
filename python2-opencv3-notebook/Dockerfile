@@ -1,6 +1,6 @@
 FROM daocloud.io/hycf555/python2-opencv3:master-d47fa11
 
-RUN pip install jupyter matplotlib
+RUN pip install jupyter matplotlib tensorflow Pillow
 
 ENV PORT=8888
 ENV LOG_LEVEL=INFO
