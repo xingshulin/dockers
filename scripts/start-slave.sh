@@ -5,12 +5,9 @@ echo "Using jenkins @ $JENKINS_URL"
 echo "Download jenkins-cli.jar"
 curl -O "$JENKINS_URL/jnlpJars/jenkins-cli.jar"
 
-echo "Login $JENKINS_USER"
-java -jar jenkins-cli.jar -s "$JENKINS_URL" login --username "$JENKINS_USER" --password "$JENKINS_PASSWORD"
-
 nodeName=${NODE_NAME:=$HOSTNAME}
 echo "Register container $nodeName as slave"
-java -jar jenkins-cli.jar -s "$JENKINS_URL" create-node "$nodeName" << EOF
+java -jar jenkins-cli.jar -s "$JENKINS_URL" create-node "$nodeName" --username $JENKINS_USER --password $JENKINS_PASSWORD << EOF
 <slave>
     <name>$nodeName</name>
     <description>docker slave $nodeName for $NODE_LABEL</description>
