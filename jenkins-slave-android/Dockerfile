@@ -26,5 +26,7 @@ COPY ./scripts/start-slave.sh ./start-slave.sh
 
 RUN mkdir -p /var/jenkins_slave/
 
+HEALTHCHECK CMD curl -s "$JENKINS_URL/computer/$HOSTNAME/api/json" | grep \"offline\":false
+
 ENTRYPOINT ["./start-slave.sh"]
 
